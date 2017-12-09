@@ -7,7 +7,7 @@ app.service('store', function($firebaseObject) {
 		this.encryptedpwd;
 		this.decryptedpwd;
 		this.email="";
-		this.key4ED="Whitehouse";
+		this.key4ED=storage.getItem(3103);
 		this.db1=firebase.database();
 		this.database = firebase.database().ref();
 
