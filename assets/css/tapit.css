@@ -202,3 +202,18 @@
 .modalbg{
   background-color:#006593;
 }
+#nextbtn{
+    margin-top: 10px;
+     background-color:#4fc3fc;
+/*    background-color: #4CAF50;*/
+border-radius: 07px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#nextbtn:hover {
+    background-color: #4CAF50;
+    color: white;
+}

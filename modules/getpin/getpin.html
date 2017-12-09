@@ -1,7 +1,13 @@
 <div>
 	<form>
 	<center>
-		<label class="loginpgtitle">Enter Your Email Id: </label><input type="email" ng-model="EmailId"><br>
+		<div ng-hide="hidemail">
+			<label class="loginpgtitle" style="margin-top: 30%">Enter Your Email Id: </label><input required type="email" ng-model="EmailId">
+			<br>
+			<button id="nextbtn" ng-click="setemail();">Next &#8250;</button>
+		</div>
+		<br>
+		<div ng-show="show4pin">
 		<label class="loginpgtitle">Set 4 digit PIN</label>
 		<br>
 		<br>
