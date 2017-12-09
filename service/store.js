@@ -1,4 +1,5 @@
 app.service('store', function($firebaseObject) {
+		//Testgitedit
 		this.storage=window.localStorage;
 		this.lgflag=false;
 		this.keyary=[];
