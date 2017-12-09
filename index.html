@@ -1,0 +1,52 @@
+<html>
+	<head>
+
+
+			<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <script src="assets/libs/jquery.min.js" type="text/javascript"></script>
+  		<script src="assets/libs/bootstrap.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/tapit.css">
+		<link rel="stylesheet" href="assets/css/w3.css">
+		<script src="assets/libs/angular.min.js" type="text/javascript" sync></script>
+		<script src="assets/libs/angular-route.js" type="text/javascript" sync></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+		<script src="assets/libs/crypto.js" type="text/javascript"></script>
+			
+		<meta charset="utf-8">
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script> 
+  		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyB7IsQsWy9_O3YgHctB-OfkAo4_7_3SgTs",
+		    authDomain: "tapittest-3bfdf.firebaseapp.com",
+		    databaseURL: "https://tapittest-3bfdf.firebaseio.com",
+		    projectId: "tapittest-3bfdf",
+		    storageBucket: "tapittest-3bfdf.appspot.com",
+		    messagingSenderId: "16690337507"
+		  };
+		  firebase.initializeApp(config);
+          
+		</script>
+  </head>
+	<body>
+			
+		<script src="app.js" type="text/javascript"> </script>
+		<script src="service/store.js" type="text/javascript"> </script>
+		<script src="modules/home/homeCtrl.js" type="text/javascript"> </script>
+		<script src="modules/getpin/getPinCtrl.js" type="text/javascript"> </script>
+		<script src="modules/verifypin/verPinCtrl.js" type="text/javascript"> </script>
+		<script src="modules/gettap/getTapCtrl.js" type="text/javascript"> </script>
+		<script src="modules/verifytap/verTapCtrl.js" type="text/javascript"> </script>
+		<script src="modules/getdata/addCtrl.js" type="text/javascript"> </script>
+		<script src="modules/display/dispCtrl.js" type="text/javascript"> </script>
+
+		<div ng-app="tapit" onload="onLoad()">
+				<div ng-view></div>
+				
+		</div>
+	</body>
+</html>

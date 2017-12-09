@@ -1,0 +1,37 @@
+ <div class="secondpg">
+	<table class="table table-bordered" style="width: 40%;" align="center">
+	<tr>
+		<th><h1 class="tabletitle">CATEGORY</h1></th>
+		<th><h1 class="tabletitle">REMOVE</h1></th>
+	</tr>
+	<tr ng-repeat="i in temp1">
+		<td align=center id="frdiv" style=" padding: 20px">
+		<button class="btn" style="width: 150px; height: 40px; background-color:#0093c4; color: #FFFFFF; box-shadow: 1px;" ng-click=dpass(i)>{{i}}</button>
+		</td>
+		<!-- $index {i} i-->
+		<td align=center style=" padding:20px;">
+				<div class="input-group input-group-lg">
+			   <button class=" btn glyphicon glyphicon-trash" ng-click="deleteparticular(i,$index,'id01');" style="background-color:#0093c4;"></button></div>
+		</td>
+	</tr>
+	
+ </table>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-opacity w3-card-4" style="margin-top: 180px;">
+    <header class="w3-container modalbg"> 
+        <span ng-click="hidemodal('id01');" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2 class="labelstitle">Are you sure you want to delete?</h2>
+      </header>
+      <!-- <div class="w3-container">
+        <h2></h2>
+      </div> -->
+      <footer class="w3-container modalbg">
+      	<button class="confirmbtn" ng-click="removeIt();">Yes</button><button class="confirmbtn" ng-click="hidemodal('id01');">No</button>
+      </footer>
+    </div>
+  </div>
+ <br>
+	<button class="loginpgbtn" ng-click=addmore()>Add More</button>
+	<button class="loginpgbtn" ng-click=logout()>Log Out</button>
+</div>
