@@ -1,8 +1,8 @@
 app.controller("verPinCtrl",function($scope,$location,store,$firebaseObject){
-		
+
 		$scope.verifypinfunc=function(){
-        	
-        	var verifyfourdp="";
+
+        	var verifyfourdp='';
         	verifyfourdp=verifyfourdp+$scope.p+$scope.q+$scope.r+$scope.s;
         	console.log(verifyfourdp);
         	var x=store.email;
@@ -23,9 +23,10 @@ app.controller("verPinCtrl",function($scope,$location,store,$firebaseObject){
             	else
             	{
             	    alert("Try again !!!");
-					$scope.p=null;$scope.q=null;$scope.r=null;$scope.s=null;
+									$scope.p='';$scope.q='';$scope.r='';$scope.s='';
+									verifyfourdp='';
             	}
         	});
 		};
-	
+
 	});

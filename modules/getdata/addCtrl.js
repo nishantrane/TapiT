@@ -20,8 +20,9 @@ app.controller("addCtrl",function($scope,$location,store,$firebaseObject){
 				{
 					store.keyary=[];
 				}
+				var p=store.storage.getItem(3103);
 				store.keyary[store.keyary.length]=$scope.key;
-				var pd=store.encrypt($scope.key,$scope.pass);
+				var pd=store.encrypt($scope.key,$scope.pass,p);
 				store.ks=store.keyary.toString();
 				store.db1.ref(''+store.email+'/'+$scope.key).set(pd.toString());	//Encrypted data getting stored
 				store.database.child(store.email).child('keyStr').set(store.ks);	//String of keys stored on firebse
@@ -33,6 +34,7 @@ app.controller("addCtrl",function($scope,$location,store,$firebaseObject){
 
 		$scope.todisp=function()
 		{
+			var x=store.email;
 			var dg=store.database.child(x).child('keyStr');
   		dg.on('value',function(v){
 						store.ks=v.val()

@@ -22,8 +22,9 @@ app.controller("verTapCtrl",function($scope,$location,store){
             {
              	  console.log('TAPS | From firebase',sn.val());
                 console.log('TAPS | Entered by user',temp);
-           		  alert("Please try again");
-								$scope.v1=null;$scope.v2=null;$scope.v3=null;$scope.v4=null;
+           		  alert("Please try again ");
+								$scope.v1=0;$scope.v2=0;$scope.v3=0;$scope.v4=0;
+								temp='';
           	}
         	});
 
